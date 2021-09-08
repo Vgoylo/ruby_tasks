@@ -1,12 +1,8 @@
 require 'pry'
 
 def leader_list(arr)
-  #a.map.with_index {|x, i| x * i} 
-  last_element_index = arr.length - 1
   arr.map.with_index do |element, index| 
-    if last_element_index == index || element > arr[index + 1]
-      element
-    end
+    element if arr.length - 1 == index || element > arr[index + 1]
   end.compact
 end
 
