@@ -11,15 +11,12 @@
 # end
 # puts replase_spases_with_dollars('Create a function that takes a word and returns true if the word has two consecutive identical letters')
 
+def words_count(str)
+  str.split(' ').count
+ end
 
 def max_words(str1, str2)
-  m1 = str1.split(' ').count
-  m2 = str2.split(' ').count
-  if m1 >= m2
-    str1 
-  else 
-    str2
-  end
+  words_count(str1) >= words_count(str2) ? str1 : str2
 end
 
 puts max_words('Create a function that takes a word and returns true' ,'if the word has two consecutive identical letters')
