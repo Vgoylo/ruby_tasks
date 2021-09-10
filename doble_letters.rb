@@ -40,11 +40,14 @@
 
 # p fizz_buzz_test(30)
 
+
 def transforming_words_binary_strings(str)
+  arr_a_n = ('a'..'m').to_a
+  arr_n_z = ('n'..'z').to_a
   str.split('').map do |element|
-    if ('a'..'m').to_a.include?(element)
+    if arr_a_n.include?(element)
       '0'
-    elsif ('n'..'z').to_a.include?(element)
+    elsif arr_n_z.include?(element)
       '1'
     else
       element
