@@ -41,18 +41,28 @@
 # p fizz_buzz_test(30)
 
 
-def transforming_words_binary_strings(str)
-  arr_a_n = ('a'..'m').to_a
-  arr_n_z = ('n'..'z').to_a
-  str.split('').map do |element|
-    if arr_a_n.include?(element)
-      '0'
-    elsif arr_n_z.include?(element)
-      '1'
-    else
-      element
-    end
-  end.join('')
+# def transforming_words_binary_strings(str)
+#   arr_a_n = ('a'..'m').to_a
+#   arr_n_z = ('n'..'z').to_a
+#   str.split('').map do |element|
+#     if arr_a_n.include?(element)
+#       '0'
+#     elsif arr_n_z.include?(element)
+#       '1'
+#     else
+#       element
+#     end
+#   end.join('')
+# end
+
+# p transforming_words_binary_strings('eate a function that takes a word and returns')
+
+def compare_ASCII_codes(word1,word2)
+  if word1.codepoints.to_a.sum >  word2.codepoints.to_a.sum
+    word2
+  else
+    word1
+  end
 end
 
-p transforming_words_binary_strings('eate a function that takes a word and returns')
+p compare_ASCII_codes("hey", "man")
