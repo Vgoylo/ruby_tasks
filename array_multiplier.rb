@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 def array_multiplier(arr)
-  count = arr.length 
-  
+  count = arr.length
+
   arr.map { |element| Array.new(count, element) }
 end
 
