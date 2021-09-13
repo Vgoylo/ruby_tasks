@@ -11,11 +11,8 @@ class Person
   end
 
   def compare_age(person)
-    if person.age > age
-      decide(person.name, 'older')
-    else
-      decide(person.name, 'younger')
-    end
+    result = person.age > age ? 'older' : 'younger'
+    decide(person.name, result)
   end
 
   private
