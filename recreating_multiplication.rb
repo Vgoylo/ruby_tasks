@@ -1,10 +1,5 @@
 def multiply(n,m)
-  sum = 0
-  m.times do 
-    sum += n 
-  end
-
-  sum
+  Array.new(n, m).sum
 end
 
 puts multiply(4,5)
