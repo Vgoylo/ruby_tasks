@@ -30,6 +30,21 @@ end
 p crosing(%w[App$le yes not my son Bi$d Sm$oll litl no], %w[App$le my not Bi$d])
 
 
+def sum_arr(arr)
+   arr.map do |element|
+      if element % 10 == 0
+         element ** 2
+      elsif element % 5 == 0
+         element ** 3
+      else
+         element
+      end
+   end.sum
+end
+
+p sum_arr([1,20,25,5,3,4,7])
+
+
 
 
 
